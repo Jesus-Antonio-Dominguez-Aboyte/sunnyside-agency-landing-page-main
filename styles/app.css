@@ -48,13 +48,19 @@ img {
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
 }
+.barlow-n {
+  font-family: "Barlow", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
 .barlow {
   font-family: "Barlow", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
-  letter-spacing: 0.2rem;
 }
 .barlow-light {
   font-family: "Barlow", sans-serif;
@@ -93,6 +99,25 @@ img {
 .text-color-white {
   color: hsl(0, 0%, 100%);
 }
+.text-color-greemdark {
+  color: rgb(33, 65, 46);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+.text-bold-xsm {
+  font-weight: 500;
+}
+.text-bold-sm {
+  font-weight: 600;
+}
+.text-bold-md {
+  font-weight: 700;
+}
+.text-bold-lg {
+  font-weight: 800;
+}
 /* ALINEADO DE TEXTO */
 .text-center {
   text-align: center;
@@ -121,10 +146,10 @@ img {
 
 /* TAMAÑOS DE TEXTO Y ESPACIADO DE  LINEAS, CARACTERES Y TRANSFORMACIONES*/
 .fn-size-xsm {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
 }
 .fn-size-sm {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .fn-size-md {
   font-size: 3.8rem;
@@ -146,8 +171,11 @@ img {
   line-height: 3rem;
 }
 
+.lt-n {
+  letter-spacing: 0.2rem;
+}
 .lt-xsm {
-  letter-spacing: 1px;
+  letter-spacing: 10px;
 }
 .lt-sm {
   letter-spacing: 1rem;
@@ -173,8 +201,11 @@ img {
 .bg-green {
   background-color: hsl(167, 40%, 24%);
 }
+.bg-green-light {
+  background-color: rgb(144, 212, 197);
+}
 .bg-blue {
-  background-color: rgb(61, 190, 255);
+  background-color: rgb(62, 191, 255);
 }
 /* ESTILOS DE CONTENEDOR  */
 .container {
@@ -193,31 +224,26 @@ img {
   max-width: 1440px;
   margin: 0 auto;
 }
-/* ESTILOS DE PARRAFO */
-.custom-p {
-  display: inline-block;
-  background-color: indianred;
-  line-height: 1.8; /* Espaciado entre líneas */
-  width: 95%;
-  text-align: left;
-  text-wrap: wrap;
-}
-
-/* Aumentar progresivamente la indentación en cada línea */
-.custom-p br:nth-of-type(1) {
-  display: block;
-  margin-left: 20px; /* Ajusta según el efecto deseado */
-}
-
-.custom-p br:nth-of-type(2) {
-  display: block;
-  margin-left: 40px; /* Más indentación para esta línea */
-}
-
 /* ESTILOS GLOBALES */
 .d-flex {
   display: flex;
 }
+.d-grid {
+  display: grid;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -282,6 +308,106 @@ img {
   left: 48.8%;
   top: 48%;
 }
+.position-fruits {
+  left: 10%;
+  bottom: 18%;
+}
+
+/* ESTILOS DE BOTONES */
+.btn-main {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn-main:hover {
+  background-color: rgba(255, 255, 255, 0.335);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+}
+/* iconos footer */
+.icon {
+  transition: filter 0.3s ease; /* Transición suave */
+}
+
+.icon:hover {
+  filter: brightness(0) invert(1); /* Cambia el color a blanco */
+}
+
+.icon-footer {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(20%) saturate(1018%)
+    hue-rotate(116deg) brightness(89%) contrast(93%);
+}
+
+.h-color:hover {
+  color: white;
+}
+.btn-secondary-orange {
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0rem 0.5rem;
+}
+
+.btn-secondary-orange::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 8px;
+  background: rgba(255, 165, 0, 0.5); /* Naranja desvanecido */
+  border-radius: 4px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.btn-secondary-orange:hover::after {
+  width: 100%; /* Se expande al ancho completo */
+}
+
+.btn-secondary-cherry {
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0rem 0.5rem;
+}
+
+.btn-secondary-cherry::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 8px;
+  background: rgba(255, 123, 106, 0.5); /* cherry */
+  border-radius: 4px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.btn-secondary-cherry:hover::after {
+  width: 100%; /* Se expande al ancho completo */
+}
+.b-r-16 {
+  border-radius: 16%;
+}
+.b-r-20 {
+  border-radius: 20px;
+}
+.b-r-50 {
+  border-radius: 50%;
+}
 
 .card {
   display: grid;
@@ -296,9 +422,15 @@ img {
 }
 .card-content {
   width: 80%;
-  display: grid;
-  gap: 2rem;
-  padding: 0 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem rem;
+}
+
+.position-fruits {
+  left: 10%;
+  bottom: 18%;
 }
 
 main section {
@@ -326,6 +458,24 @@ header {
   display: none;
 }
 
+.image-gallery {
+  width: 100%; /* Contenedor ocupa el 100% del espacio */
+  overflow: hidden; /* Evita desbordamiento */
+}
+
+.image-gallery article {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual ancho */
+
+  max-width: 100%; /* Evita desbordamiento */
+}
+
+.image-gallery img {
+  width: 100%; /* Las imágenes se ajustan a la celda del grid */
+  height: auto; /* Mantiene proporciones */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
 @media screen and (width <= 768px) {
   .card {
     grid-template-columns: 1fr;
@@ -340,13 +490,17 @@ header {
     width: 100%;
   }
   .card:nth-child(even) img {
-    order: 2;
-  }
-  .card:nth-child(even) .card-content {
     order: 1;
+  }
+  .card :nth-child(even) .card-content {
+    order: 2;
   }
   .promos {
     grid-template-columns: 1fr;
+  }
+  .position-fruits {
+    left: 10%;
+    bottom: 0%;
   }
   .menu-footer {
     flex-direction: column;
@@ -359,5 +513,14 @@ header {
   }
   .icon-menu {
     display: block;
+  }
+  .image-gallery article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4 columnas de igual ancho */
+
+    max-width: 100%; /* Evita desbordamiento */
+  }
+  .col {
+    grid-template-columns: 1fr;
   }
 }
